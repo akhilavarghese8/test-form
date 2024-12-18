@@ -1,0 +1,13 @@
+<div>
+  <h2>Dynamic Components</h2>
+
+  <div *ngFor="let component of components; let i = index">
+    <app-input-component
+      (delete)="removeComponent(i)"
+      [index]="i">
+    </app-input-component>
+    <button type="button" (click)="addComponent()">+ Add</button>
+  </div>
+</div>
+
+
